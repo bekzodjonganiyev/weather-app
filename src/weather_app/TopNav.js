@@ -5,8 +5,8 @@ import "./style.css"
 const TopNav = () => {
     return(
         <>
-        <div className="topNav">
-            <h3>Weather App</h3>
+        <div className="top-nav">
+            <h1>Weather App</h1>
         </div>
         </>
     )

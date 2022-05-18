@@ -1,20 +1,26 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
 
 body {
+    background-image: url(https://wallpapercave.com/wp/UDNXQGZ.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
     font-family: 'Montserrat', sans-serif;
     margin: 0;
     padding: 0;
+    overflow: hidden;
+    text-shadow: 3px 0px 7px rgba(81, 67, 21, 0.8), -3px 0px 7px rgba(81, 67, 21, 0.8), 0px 4px 7px rgba(81, 67, 21, 0.8);
 }
 
-.topNav {
-    background-color: #f7f701;
+.top-nav {
     width: 100%;
     padding: 10px;
 }
 
-h3 {
+h1 {
     text-align: center;
     cursor: pointer;
+    color: white;
+    font-size: 40px;
 }
 
 .search {
@@ -26,22 +32,42 @@ h3 {
 .search>input {
     width: 40%;
     border: none;
-    border-bottom: 1px solid #d6d6d6;
-    padding-bottom: 10px;
-    font-size: 15px;
+    padding: 10px;
+    margin-bottom: 50px;
+    font-size: 24px;
+    font-weight: bolder;
+    color: white;
+    text-shadow: 3px 0px 7px rgba(81, 67, 21, 0.8), -3px 0px 7px rgba(81, 67, 21, 0.8), 0px 4px 7px rgba(81, 67, 21, 0.8);
+    border-radius: 10px;
+    background-color: rgba(3, 22, 5, 0.384);
+    box-shadow: inset 0 0 10px 0px rgb(230, 236, 230);
 }
 
 .search>input:focus {
-    border: none;
-    box-shadow: none;
     outline: none;
-    border-bottom: 1px solid #d6d6d6;
 }
 
 .search>input::placeholder {
+    color: cornsilk;
     font-size: 15px;
+    text-shadow: 3px 0px 7px rgba(81, 67, 21, 0.8), -3px 0px 7px rgba(81, 67, 21, 0.8), 0px 4px 7px rgba(81, 67, 21, 0.8);
 }
 
-.card{
-    text-align:center;
+
+.card {
+    width: 40%;
+    margin: 0 auto;
+    box-sizing: border-box;
+    padding: 20px 80px;
+    text-align: center;
+    background-color: rgba(3, 22, 5, 0.384);
+    box-shadow: inset 0 2px 15px 1px rgb(230, 236, 230);
+    color: white;
+    border-radius: 10px;
+}
+
+.weather-logo {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
 }

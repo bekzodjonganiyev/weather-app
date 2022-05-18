@@ -16,9 +16,6 @@ const Application = () => {
             
         }
 
-        // if ( ApiWeather()) {
-        //     alert("Invalit!")
-        // }
     }
 
     return (
