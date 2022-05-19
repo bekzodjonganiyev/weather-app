@@ -1,5 +1,6 @@
+import axios from "axios"
 import React, { useState } from "react"
-import { ApiWeather } from "./api/ApiWeather"
+import apiWeather from "./api/ApiWeather"
 
 const Application = () => {
 
@@ -9,14 +10,21 @@ const Application = () => {
     const search = async (evt) => {
 
         if (evt.code === "Enter") {
-            const data = await ApiWeather(query)
-            setWeather(data)
-            setQuery('')
-            console.log(data);
-            
+            const data = await apiWeather(query)
+            if (data.status === 200) {
+                console.log(data , 'ggerhergfdg');
+                setWeather(data?.data)
+                console.log(wether);
+            }
+
+            if (data.response.status === 404) {
+                alert("Shaharni nomi notog`ri kiritildi")
+                setQuery(" ")
+            }
         }
 
     }
+
 
     return (
         <div className="main-container">
@@ -24,7 +32,7 @@ const Application = () => {
                 <input
                     type="text"
                     className="search"
-                    placeholder="Search..."
+                    placeholder="Search with city name..."
                     value={query}
                     onChange={(evt) => setQuery(evt.target.value)}
                     onKeyUp={search}
